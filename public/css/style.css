@@ -1,0 +1,22 @@
+.product-card {
+    position: relative;
+    display: block;
+    margin: 10;
+    background-color: #fff;
+    border-radius: 3px;
+    border-width: 1;
+    width: 100%;
+    padding-top: 25px;
+    color: #222;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 1px 5px -1px rgba(0,0,0,.13);
+    -webkit-transition: box-shadow .15s ease-in-out;
+    transition: box-shadow .15s ease-in-out;
+    text-align: center;
+}
+
+.product-image {
+    max-height: 450px;
+    width: auto;
+}

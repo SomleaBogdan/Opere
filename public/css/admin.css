@@ -1,0 +1,221 @@
+html {
+    color: #2a2742;
+    font-family: 'Montserat', sans-serif !important;
+    font-weight: 100;
+    height: 100vh;
+}
+
+.bg-smst-default {
+  background-color: #2a2742; 
+}
+
+body {
+    background: #f1f4f7; 
+    font-size: 18px;
+    color: #2a2742;
+    font-family : "Montserrat";
+  }
+  
+  .sidebar {
+    top: 60px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: white;
+  }
+  
+  .sidebar ul {
+    display: block;
+  }
+  
+  .sidebar ul.nav li a {
+    height: 50px;
+    font-size: 15px;
+    line-height: 2em;
+    color: #2a2742;
+  }
+  
+  .nav>li {
+    position: relative;
+    display: block;
+    float: left;
+  }
+  
+  .nav > li > a {
+    position: initial;
+    display: block;
+    padding: 10px 15px;
+  }
+  
+  .nav>li>a:hover {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .sidebar-item:hover {
+    color: white;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+  }
+  
+  
+  .menu {
+    margin-top: 25px;
+    display: table;
+  }
+  
+  .menu li {
+    width: 100%;
+    margin: auto;
+    display:inline-block;
+    vertical-align: middle;
+    height: 44px;
+  }
+  
+  .menu li a {
+    text-align: left;
+  
+    font-size: 18px;
+  }
+  
+  .active {
+    color: white;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+  }
+  
+  
+  p {
+    margin: auto;
+    color: #2a2742; 
+  }
+  
+  h1 {
+    font-weight: 300;
+    font-size: 40px; 
+  }
+  
+  h2 {
+    font-weight: 300;
+    margin-bottom: 20px; 
+  }
+  
+  h3, h4 {
+    font-weight: 300; 
+  }
+  
+  input.form-control {
+    border: 1px solid #ddd;
+    box-shadow: none;
+    height: 46px;
+  }
+
+  
+  .navbar-header .navbar-brand {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    height: 60px;
+    padding-top: 18px; 
+  }
+  
+  .navbar-header .navbar-brand span {
+    color: #30a5ff; 
+  }
+  
+  .profile-sidebar {
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecf2;
+  }
+  
+  .profile-usertitle-name {
+    font-size: 20px;
+    margin-bottom: 0px; 
+  }
+  
+  
+  .btn-bordered {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 100px;
+    height: 35px;
+    margin-right: 25px;
+    border-radius: 10px;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+   
+  .btn-bordered:hover {
+     color: #343a40;
+     border: 1px solid 343a40;
+     background-color: white;
+  }
+
+  .bordered {
+    border: 1px solid white;
+  }
+
+  .rounded {
+    border-radius: 50px;
+  }
+.bordered-spacing {
+  padding:25px;
+}
+
+.add-on .input-group-btn > .btn {
+  border-left-width:0;left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* stop the glowing blue shadow */
+.add-on .form-control:focus {
+ box-shadow:none;
+ -webkit-box-shadow:none; 
+ border-color:#cccccc; 
+}
+.form-control{width:20%}
+.navbar-nav > li > a {
+  border-right: 1px solid #ddd;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.navbar-nav:last-child{ border-right:0}
+
+
+.custom-file-control::after {
+  content: "Choose file...";
+}
+
+.custom-file-control::before {
+  content: "Browse";
+}
+  
+.smart-btn-default {
+  background-color: #31b699;
+  border-radius: 10px;
+  color:white;
+  border: 1px solid white;
+  font-family : "Montserrat";
+  font-size: 18px;
+}
+ 
+.smart-btn-default:hover {
+  background-color: #686076;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid white;
+}
+
+.smart-bg-default {
+  background-color: rgb(42, 39, 66);
+}
