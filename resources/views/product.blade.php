@@ -32,7 +32,11 @@
                             <div style="text-align: center;">
                                 <img src="https://via.placeholder.com/100" style="border-radius: 50%;">
                                 <h5 style="margin-top:10px;">{{$announce->owner->nume}} {{$announce->owner->prenume}}</h5>
+                                @if($announce->owner->id !== Auth::id())
                                 <a class="btn btn-primary" href="{{route('openConversation', ['id1'=>Auth::user()->id,'id2'=>$announce->owner->id, 'id3'=>$announce->id])}}">Trimite Mesaj</a>
+                                @else
+                                <a class="btn btn-primary disabled" href="{{route('openConversation', ['id1'=>Auth::user()->id,'id2'=>$announce->owner->id, 'id3'=>$announce->id])}}">Trimite Mesaj</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -42,7 +46,11 @@
                     <div class="card">
                         <div class="card-body">
                             <div style="text-align: center;">
+                            @if($announce->owner->id !== Auth::id())
                                 <a class="btn btn-success" href="#">Propune Oferta</a>
+                            @else
+                                <a class="btn btn-success disabled" href="#">Propune Oferta</a>
+                            @endif
                             </div>
                         </div>
                     </div>

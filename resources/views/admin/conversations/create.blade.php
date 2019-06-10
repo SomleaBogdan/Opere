@@ -12,7 +12,7 @@
                             <!-- My messages -->
                             @if($mesaj->id_expeditor === Auth::id())
                             <div class="card-body">
-                                <span>Raspunsul Tau:</span>
+                                <span>Mesajul Tau:</span>
                                 <span class="float-right" style="color:rgba(180, 180, 180, 1)">{{$mesaj->created_at}}</span>
                                 <div style="background-color: green; border-radius:5px;" class="float-right w-100 h-100">
                                     <span class="float-right text-white" style="margin:10px; margin-right:25px;">{{$mesaj->continut_mesaj}}</span>

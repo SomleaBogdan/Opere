@@ -25,7 +25,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/admin/mesaje">
+            <a class="nav-link" href="/admin/conversatii">
                 <i class="fa fa-comment"></i>
                     <span>Mesaje</span>
             </a>

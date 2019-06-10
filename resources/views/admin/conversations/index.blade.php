@@ -8,22 +8,22 @@
             <thead>
                 <tr>  
                     <th> Nume Expeditor </th>
-                    <th> Titlu Mesaj </th>
+                    <th> Titlu Conversatie </th>
                     <th> Actiune </th>
                 </tr>
             </thead>
             <tbody id="">
-            @foreach ($messages as $message)
+            @foreach ($conversations as $conversation)
                 <tr>
                     <td>
-                    {{$message->expeditor->nume}} {{$message->expeditor->prenume}}
+                    {{$conversation->expeditor->nume}} {{$conversation->expeditor->prenume}}
                     </td>
-                    <td><a href="{{route('mesaje.show', $message->id)}}">{{$message->titlu_mesaj}}</a></td>
+                    <td><a href="{{route('conversatii.show', $conversation->id)}}">{{$conversation->titlu_mesaj}}</a></td>
                     <td>
-                    <a class="btn btn-info text-white" href="{{route('mesaje.show', $message->id)}}"> <i class="fa fa-comment-o"></i></a>
+                    <a class="btn btn-info text-white" href="{{route('conversatii.show', $conversation->id)}}"> <i class="fa fa-comment-o"></i></a>
                     {!! Form::open([
                      "method" => "delete",
-                     "route" => ['mesaje.destroy', $message->id], 
+                     "route" => ['conversatii.destroy', $conversation->id], 
                      'class' => 'd-inline delete-form'
                      ])!!}
                      {{ Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger'] )}}

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Conversation;
 use App\Announce;
-use App\User;
 use App\Message;
 
 class ConversationController extends Controller
@@ -78,7 +77,8 @@ class ConversationController extends Controller
      */
     public function show($id)
     {
-        
+        $conversation = Conversation::findOrFail($id);
+        return view('admin.conversations.show')->with('conversation', $conversation);
     }
 
     /**
