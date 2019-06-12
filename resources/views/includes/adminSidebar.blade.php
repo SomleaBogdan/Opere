@@ -12,6 +12,12 @@
 </div>
 <div class="nav-wrapper">
     <ul class="nav flex-column">
+    <li class="nav-item">
+            <a class="nav-link" href="/">
+                <i class="fa fa-home"></i>
+                    <span>Acasa</span>
+            </a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="/admin">
                 <i class="fa fa-user"></i>
@@ -31,9 +37,9 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/admin/oferte">
+            <a class="nav-link" href="/admin/cart">
                 <i class="fa fa-usd"></i>
-                    <span>Oferte Primite</span>
+                    <span>Cart</span>
             </a>
         </li>
 
@@ -43,7 +49,7 @@
                     <span>Logout</span>
             </a>
         </li>
-    <form id="frm-logout" action="#" method="POST" style="display: none;">
+    <form id="frm-logout" action="{{'logout'}}" method="POST" style="display: none;">
         {{ csrf_field() }}
     </form>
 </div>

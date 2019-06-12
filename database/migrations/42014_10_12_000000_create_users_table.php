@@ -20,14 +20,19 @@ class CreateUsersTable extends Migration
             $table->string('nume');
             $table->string('prenume');
             $table->string('email')->unique();
-            $table->string('nr_matricol')->unique();
-            $table->string('telefon')->unique();
+            $table->string('nr_matricol');
+            $table->string('telefon');
             $table->integer('an_studiu');
             $table->string('password');
             $table->string('imagine_profil')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->bigInteger('id_cart')->unsigned()->nullable();
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('users', function($table) {
+            $table->foreign('id_cart')->references('id')->on('carts');
         });
     }
 

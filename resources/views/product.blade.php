@@ -47,9 +47,16 @@
                         <div class="card-body">
                             <div style="text-align: center;">
                             @if($announce->owner->id !== Auth::id())
-                                <a class="btn btn-success" href="#">Propune Oferta</a>
+                                <a class="btn btn-success" href="#">Adauga in Cos</a>
                             @else
-                                <a class="btn btn-success disabled" href="#">Propune Oferta</a>
+                            <form method="POST" action="{{route('cart.store')}}">
+                                @CSRF
+                                <input name="product_id" style="display:none" type="text" value="{{$announce->id}}"/>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true">Adauga in cos</i>    
+                                </button>
+                            </form>
+                                
                             @endif
                             </div>
                         </div>

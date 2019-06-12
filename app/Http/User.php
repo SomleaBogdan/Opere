@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nume', 'prenume', 'email', 'password', 'nr_matricol', 'an_studiu', 'telefon', 'imagine_profil'
+        'nume', 'prenume', 'email', 'password', 'nr_matricol', 'an_studiu', 'telefon', 'imagine_profil', 'id_cart'
     ];
 
     public function announces()
@@ -32,6 +32,11 @@ class User extends Authenticatable
     public function mesaje_primite()
     {
         return $this->hasMany('App\Conversation', 'id_destinatar', 'id');
+    }
+
+    public function cart()
+    {
+        return $this->hasOne('App\Cart', 'id', 'id_cart');
     }
 
     /**
