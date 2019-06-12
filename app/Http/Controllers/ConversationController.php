@@ -58,7 +58,7 @@ class ConversationController extends Controller
         $conversation->mesaje()->save($mesaj_nou);
 
         
-        
+        return redirect()->back();
         // 'titlu_mesaj','continut_mesaj', 'id_conversatie', 'id_expeditor'
         
     }
@@ -123,5 +123,6 @@ class ConversationController extends Controller
                                                 ->with('product',$product)
                                                 ->with('expeditor', $senderId)
                                                 ->with('destinatar', $recipientId);
+        
     }
 }

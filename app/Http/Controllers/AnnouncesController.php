@@ -17,7 +17,7 @@ class AnnouncesController extends Controller
      */
     public function index()
     {        
-        $announces = Announce::all();
+        $announces = Auth::user()->announces;
         return view('admin/announces/index')->with('announces', $announces);
     }
 

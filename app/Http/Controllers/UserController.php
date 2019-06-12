@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Hash;
+use App\Helpers\ImageHelper;
 use App\User;
+use Auth;
+
 
 
 class UserController extends Controller
@@ -80,6 +83,13 @@ class UserController extends Controller
         }
     }
 
+    public function setImageForUserWithId(Request $request) 
+    {
+        $user = Auth::user();
+        $imageUrl = ImageHelper::saveImageFrom($request, 'file' ,'Utilizatori');
+        $user->imagine_profil =  $imageUrl;
+        $user->save();
+    }
     /**
      * Display the specified resource.
      *
@@ -111,7 +121,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->nume = $request->nume;
+        $user->prenume = $request->prenume;
+        $user->email = $request->email;
+        $user->nr_matricol = $request->nr_matricol;
+        $user->telefon = $request->telefon;
+        $user->save();
+
+        return redirect()->back();
+        
     }
 
     /**
